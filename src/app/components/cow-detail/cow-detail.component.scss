@@ -1,0 +1,232 @@
+.cow-details-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Heading */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+/* Paragraphs for basic info */
+p {
+  font-size: 1rem;
+  color: #444;
+  margin: 6px 0;
+
+  strong {
+    font-weight: 600;
+    color: #222;
+  }
+}
+
+/* Section title for Events */
+h3 {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+  border-bottom: 1px solid #c8e6c9;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+/* Event list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+
+  li {
+    background: #f9f9f9;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+
+    strong {
+      color: #2e7d32;
+    }
+
+    span {
+      color: #555;
+    }
+  }
+}
+
+/* No events message */
+p:last-of-type {
+  margin-top: 8px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Back button styling */
+button {
+  margin-top: 25px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #eee;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: #ddd;
+    transform: scale(1.03);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cow-details-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+:host ::ng-deep .p-card {
+  max-width: 800px;
+  margin: 28px auto 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 22px rgba(70,110,130,0.11);
+  background: #fff;
+  padding-bottom: 12px;
+}
+
+:host ::ng-deep .p-card-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+.detail-field {
+  font-size: 1.12rem;
+  margin-bottom: 9px;
+  b, strong {
+    color: #232323;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  i {
+    font-style: italic;
+    font-weight: 600;
+  }
+}
+
+.detail-field:last-of-type {
+  margin-bottom: 18px;
+}
+
+.detail-label {
+  margin-top: 24px;
+  color: #28a745;
+  font-weight: 700;
+  font-size: 1.17rem;
+  margin-bottom: 0;
+}
+
+.event-list {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.event-list li {
+  background: #fafbfa;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  padding: 11px 18px;
+  margin-bottom: 11px;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-type {
+  color: #28a745;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.event-date {
+  color: #959595;
+  font-size: 0.98em;
+  margin-left: 3px;
+}
+
+.event-details {
+  color: #585858;
+  font-size: 0.98em;
+}
+
+.no-events {
+  color: #909090;
+  font-style: italic;
+  padding: 8px 2px 7px 2px;
+  font-size: 1.08rem;
+}
+
+.button-row {
+  margin: 28px 0 4px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+:host ::ng-deep .p-button {
+  font-size: 1.09rem;
+  min-width: 110px;
+  padding: 0.7em 2.1em;
+  border-radius: 8px;
+  background: #efefef;
+  color: #24282c;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 0.5px 1.5px rgba(150,170,150,0.06);
+  transition: background 0.16s;
+}
+
+:host ::ng-deep .p-button:hover {
+  background: #e2e2e2;
+  color: #101111;
+}
+
+@media (max-width: 700px) {
+  :host ::ng-deep .p-card { margin: 14px 4px 12px 4px; }
+}
+

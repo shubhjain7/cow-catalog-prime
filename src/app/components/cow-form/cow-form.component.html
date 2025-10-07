@@ -1,0 +1,30 @@
+
+<div class="form-root">
+  <div class="form-card">
+    <div class="form-header">
+      <span class="emoji">🐄</span>
+      <h2>Add New Cow</h2>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+
+      <div class="form-actions">
+        <button
+          pButton
+          type="submit"
+          class="p-button-success add-btn"
+          [disabled]="!form.valid"
+        >+ Add Cow</button>
+
+        <button
+          pButton
+          type="button"
+          class="p-button-secondary back-btn"
+          (click)="goBack()"
+        >← Back</button>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+
+
+<div class="catalog-root">
+  <div class="catalog-header">
+    <span class="emoji">🐄</span>
+    <h1>Cow Catalog</h1>
+  </div>
+
+  <app-cow-search (filterChange)="onFilter($event)"></app-cow-search>
+
+  <div class="add-btn-row">
+    <button pButton type="button" (click)="goToAddCow()" class="add-btn p-button-success">
+      <span class="pi pi-plus"></span>
+      ➕ Add New Cow
+    </button>
+  </div>
+
+  <ng-container *ngFor="let cow of cows" >
+    <div (click)="viewCow(cow)" class="cow-card" [ngClass]="{'deceased-bg': cow.status === 'Deceased'}">
+      <div class="top-row">
+        <span class="cow-field"><b>ID:</b> {{ cow.id }}</span>
+        <span class="status-chip" [ngClass]="{
+            'active': cow.status === 'Active',
+            'intreatment': cow.status === 'In Treatment',
+            'deceased': cow.status === 'Deceased'
+          }">
+          {{ cow.status }}
+        </span>
+      </div>
+      <div class="mid-row">
+        <span><b>Sex:</b> {{ cow.sex }}</span>
+        <span><b>Pen:</b> {{ cow.pen }}</span>
+      </div>
+      <div class="bottom-row">
+        <span><b>Last Event:</b>
+          <span class="event-date">{{ cow.lastEventDate | date:'MMM d, y, h:mm a' }}</span>
+        </span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

@@ -1,0 +1,28 @@
+
+<p-card *ngIf="cow">
+  <ng-template pTemplate="title">
+    Cow Details: {{ cow.id }}
+  </ng-template>
+  <div class="detail-field"><strong>Sex:</strong> {{ cow.sex }}</div>
+  <div class="detail-field"><strong>Pen:</strong> {{ cow.pen }}</div>
+  <div class="detail-field"><strong>Status:</strong> {{ cow.status }}</div>
+  <div class="detail-field" *ngIf="cow.weight"><strong>Weight:</strong> {{ cow.weight }} kg</div>
+  <div class="detail-field"><strong>Last Event:</strong> {{ cow.lastEventDate | date:'short' }}</div>
+
+  <div class="p-mt-3 p-mb-3 detail-label">Events:</div>
+  <ul *ngIf="cow.events && cow.events.length; else noEvents" class="event-list">
+    <li *ngFor="let event of cow.events">
+      <strong>{{ event.type }}</strong>
+      <span class="event-date">- {{ event.date | date:'short' }}</span>
+      <span class="event-details" *ngIf="event.details">- {{ event.details }}</span>
+    </li>
+  </ul>
+  <ng-template #noEvents>
+    <div class="event-list">No events recorded for this cow.</div>
+  </ng-template>
+
+  <div class="button-row">
+    <button pButton type="button" class="p-button-secondary" (click)="goBack()">← Back</button>
+  </div>
+</p-card>
+

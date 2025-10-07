@@ -1,0 +1,164 @@
+  .form-root {
+    min-height: 100vh;
+    background: #fafbfc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+
+    .form-card {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 6px 34px rgba(80,120,114,0.11);
+      padding: 40px 32px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .form-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      .emoji {
+        font-size: 2.2em;
+        vertical-align: middle;
+        margin-right: 12px;
+      }
+      h2 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+button {
+  margin-top: 25px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #eee;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: #ddd;
+    transform: scale(1.03);
+  }
+}
+  /* Formly/PrimeNG form fields: */
+  ::ng-deep formly-form {
+    width: 100%;
+  }
+
+  ::ng-deep .formly-field {
+    margin-bottom: 22px;
+  }
+
+  ::ng-deep .form-group,
+  ::ng-deep .formly-field .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  ::ng-deep .formly-field label {
+    margin-bottom: 7px;
+    font-size: 1.09rem;
+    font-weight: 600;
+    color: #23292b;
+  }
+
+  ::ng-deep .formly-field input,
+  ::ng-deep .formly-field select,
+  ::ng-deep .formly-field .p-inputtext,
+  ::ng-deep .formly-field .p-dropdown,
+  ::ng-deep .formly-field textarea {
+    width: 100% !important;
+    min-height: 44px;
+    padding: 10px 13px;
+    border: 1.5px solid #d7dbe4 !important;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1.15rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color .19s;
+  }
+
+  ::ng-deep .formly-field input:focus,
+  ::ng-deep .formly-field select:focus,
+  ::ng-deep .formly-field .p-inputtext:focus,
+  ::ng-deep .formly-field .p-dropdown:focus {
+    border-color: #39c282 !important;
+  }
+
+  ::ng-deep .formly-form hr {
+    margin: 30px 0 17px 0;
+    border: none;
+    border-top: 1.3px solid #e0e7ec;
+  }
+
+  ::ng-deep .formly-form b,
+  .event-section-title {
+    color: #209441;
+    font-size: 1.13rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+    display: block;
+  }
+
+  /* Form Action Buttons */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 38px;
+    padding-inline: 2px;
+  }
+
+  .add-btn.p-button-success {
+    background: #aeeab7;
+    color: #166531;
+    border: none;
+    font-size: 1.14rem;
+    font-weight: 600;
+    border-radius: 9px;
+    min-width: 140px;
+    padding: 0.7em 0;
+    transition: background .17s, color .18s;
+  }
+  
+  .add-btn.p-button-success:disabled {
+    background: #e7f9e8;
+    color: #b7b7b7;
+    cursor: not-allowed;
+  }
+  .add-btn.p-button-success:not(:disabled):hover {
+    background: #63c066;
+    color: #fff;
+  }
+
+  .back-btn.p-button-secondary {
+    background: #efefef;
+    color: #333;
+    border: none;
+    min-width: 112px;
+    border-radius: 9px;
+    font-size: 1.13rem;
+    font-weight: 500;
+    padding: 0.7em 0;
+    transition: background .14s, color .18s;
+  }
+  .back-btn.p-button-secondary:hover {
+    background: #e7e7e7;
+    color: #111;
+  }

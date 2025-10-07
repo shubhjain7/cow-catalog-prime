@@ -5,9 +5,9 @@ import { NxWelcome } from './nx-welcome';
 @Component({
   imports: [NxWelcome, RouterModule],
   selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
-export class App {
-  protected title = 'cow-catalog-prime';
+export class AppComponent {
+  protected title = 'Cow Catalog Prime';
 }
