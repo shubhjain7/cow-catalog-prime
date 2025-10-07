@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeicons/primeicons.css';
+
+@font-face {
+  font-family: 'PrimeIcons';
+  src: url('/src/assets/fonts/primeicons.woff2') format('woff2'),
+       url('/src/assets/fonts/primeicons.woff') format('woff');
+}
 body {
   font-family: var(--font-family);
   background-color: var(--surface-ground);

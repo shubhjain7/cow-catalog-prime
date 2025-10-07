@@ -1,0 +1,25 @@
+/* load PrimeIcons fonts from the built assets folder */
+@import 'primeicons/primeicons.css';
+
+@font-face {
+  font-family: 'PrimeIcons';
+  src: url('/src/assets/fonts/primeicons.eot');
+  src: url('/src/assets/fonts/primeicons.eot?#iefix') format('embedded-opentype'),
+       url('/src/assets/fonts/primeicons.woff2') format('woff2'),
+       url('/src/assets/fonts/primeicons.woff') format('woff'),
+       url('/src/assets/fonts/primeicons.ttf') format('truetype'),
+       url('/src/assets/fonts/primeicons.svg#primeicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* optional: basic class so icons render if needed */
+.pi {
+  font-family: 'PrimeIcons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
