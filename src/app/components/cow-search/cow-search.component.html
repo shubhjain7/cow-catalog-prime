@@ -1,12 +1,9 @@
-
-
 <form class="search-row" (ngSubmit)="applyFilters()">
     <div class="search-box">
       <i class="pi pi-search"></i>
       <input pInputText [(ngModel)]="tag" name="tag" type="text" placeholder="Search by Ear Tag" />
     </div>
     <select [(ngModel)]="status" name="status" class="status-dd" (change)="applyFilters()">
-      <option value="">All Status</option>
       <option *ngFor="let option of statusOptions" [value]="option.value">
         {{ option.label }}
       </option>

@@ -31,8 +31,9 @@ export class CowService {
   // Optionally, for filtering/searching/advance search:
   filterCows(tag?: string, status?: string, pen?: string): Cow[] {
     return this.cowsSubject.value.filter(cow => {
+      let stat = status === 'null' ? null : status;
       const tagMatch = !tag || cow.id.toLowerCase().includes(tag.toLowerCase());
-      const statusMatch = !status || cow.status === status;
+      const statusMatch = !stat || cow.status === stat;
       const penMatch = !pen || cow.pen.toLowerCase().includes(pen.toLowerCase());
       return tagMatch && statusMatch && penMatch;
     });
